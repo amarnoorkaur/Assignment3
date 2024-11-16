@@ -1,0 +1,24 @@
+Initial Research:
+Reference -> https://theautomatic.net/2018/11/28/how-to-measure-dna-similarity-with-python-and-dynamic-programming/ 
+https://www.youtube.com/watch?v=ipp-pNRIp4g&pp=ygUaTmVlZGxlbWFuLVd1bnNjaCBhbGdvcml0aG0%3D 
+
+DNA Alignment:
+Is the process of arranging 2 or more DNA sequences to identify the areas of similarity.
+
+Matches: same sequence (high score indicates similarity while low score indicates unrelated sequence)
+Mismatches: matches - nonmatches
+
+Scoring scheme:
+Match score: Points awarded for each matching nucleotide between the sequences (add 1 for each match)
+Mismatch penalty: A negative score for each non-matching nucleotide which indicates a difference. (Subtract 1 for each mismatch)
+Gap penalty: Gaps are inserted into a sequence alignment to account for insertions or deletions (indels) that may have occurred during the evolutionary process or to optimize the alignment score.  (Subtract 1 for each gap i.e. insertion/deletion (shown by - sign))
+example: -s1: AGCT
+         -s2: AG-T (to align s2 better with s1 - is introduced )
+
+Global match: aligning the sequence end to end from starting to end. Needleman-Wunsch algorithm is used for global match. (global match is used when both the sequences are thought to have the same length)
+
+local match: is used to find the area of the most similar region in two larger sequences. Smith-Waterman algorithm is used for local matching. 
+example: S1: GGAGCTGACCC; S2:AGCTG
+
+
+
