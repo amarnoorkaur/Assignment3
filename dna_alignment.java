@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class DNAAlignment {
-    // Scoring constants
+    // Scoring the constants to choose which alignment to be used
     private static final int MATCH = 1;
     private static final int MISMATCH = -1;
     private static final int GAP = -2;
@@ -9,23 +9,23 @@ public class DNAAlignment {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Input the DNA sequences
+        // Inputing the DNA sequences
         System.out.println("Enter first DNA sequence:");
         String seq1 = scanner.nextLine().toUpperCase();
 
         System.out.println("Enter second DNA sequence:");
         String seq2 = scanner.nextLine().toUpperCase();
 
-        // Decide the algorithm to use based on sequence lengths
+        // Deciding the algorithm to use based on sequence lengths
         boolean useLocalAlignment = shouldUseLocalAlignment(seq1, seq2);
 
         System.out.println("\nSelected Algorithm: " +
                 (useLocalAlignment ? "Local Alignment" : "Global Alignment"));
 
-        // Measure the execution time
+        // Measuring the execution time
         long startTime = System.nanoTime();
 
-        // Perform alignment
+        // Performing alignment
         int[][] scores;
         String[] alignment;
 
@@ -46,12 +46,16 @@ public class DNAAlignment {
         System.out.println(alignment[0]);
         System.out.println(alignment[1]);
 
-        // Display alignment visualization
+        // score matrix
+        System.out.println("\nAlignment Score Matrix:");
+        printScoreMatrix(scores);
+
+        // alignment visualization
         String visualization = visualizeAlignment(alignment[0], alignment[1]);
         System.out.println("Alignment Visualization:");
         System.out.println(visualization);
 
-        // Display execution time in milliseconds
+        // execution time in milliseconds
         System.out.printf("\nExecution Time: %.3f ms%n", executionTime / 1e6);
     }
 
@@ -208,5 +212,15 @@ public class DNAAlignment {
         }
 
         return visualization.toString();
+    }
+
+    // Method to print the score matrix
+    private static void printScoreMatrix(int[][] scores) {
+        for (int i = 0; i < scores.length; i++) {
+            for (int j = 0; j < scores[i].length; j++) {
+                System.out.print(scores[i][j] + "\t");
+            }
+            System.out.println();
+        }
     }
 }
