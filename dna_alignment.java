@@ -46,6 +46,11 @@ public class DNAAlignment {
         System.out.println(alignment[0]);
         System.out.println(alignment[1]);
 
+        // Display alignment visualization
+        String visualization = visualizeAlignment(alignment[0], alignment[1]);
+        System.out.println("Alignment Visualization:");
+        System.out.println(visualization);
+
         // Display execution time in milliseconds
         System.out.printf("\nExecution Time: %.3f ms%n", executionTime / 1e6);
     }
@@ -188,5 +193,20 @@ public class DNAAlignment {
         }
 
         return new String[]{alignedSeq1.reverse().toString(), alignedSeq2.reverse().toString()};
+    }
+
+    // Method to visualize the alignment
+    private static String visualizeAlignment(String alignedSeq1, String alignedSeq2) {
+        StringBuilder visualization = new StringBuilder();
+
+        for (int i = 0; i < alignedSeq1.length(); i++) {
+            if (alignedSeq1.charAt(i) == alignedSeq2.charAt(i)) {
+                visualization.append('|');  // Match
+            } else {
+                visualization.append(' ');  // Mismatch or gap
+            }
+        }
+
+        return visualization.toString();
     }
 }
