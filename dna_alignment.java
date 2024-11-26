@@ -9,25 +9,34 @@ public class DNAAlignment {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Input DNA sequences
+        // Inputing the DNA sequences
         System.out.println("Enter first DNA sequence:");
         String seq1 = scanner.nextLine().toUpperCase();
 
         System.out.println("Enter second DNA sequence:");
         String seq2 = scanner.nextLine().toUpperCase();
 
-        // Perform alignment
+        // To measure the execution time take for alignment
+        long startTime = System.nanoTime();
+
+        // aligining
         int[][] scores = calculateAlignmentMatrix(seq1, seq2);
         String[] alignment = traceback(scores, seq1, seq2);
 
-        // Display results
+        long endTime = System.nanoTime();
+        long executionTime = endTime - startTime;
+
+        // Displaying  results
         System.out.println("\nAlignment Score: " + scores[seq1.length()][seq2.length()]);
         System.out.println("Aligned Sequences:");
         System.out.println(alignment[0]);
         System.out.println(alignment[1]);
+
+        // Displaying execution time in milliseconds
+        System.out.printf("\nExecution Time: %.3f ms%n", executionTime / 1e6);
     }
 
-    // Calculate the alignment matrix using Needleman-Wunsch algorithm
+    // Calculating the alignment matrix using Needleman-Wunsch algorithm
     private static int[][] calculateAlignmentMatrix(String seq1, String seq2) {
         int m = seq1.length();
         int n = seq2.length();
@@ -80,7 +89,7 @@ public class DNAAlignment {
             }
         }
 
-        // Handle remaining characters
+
         while (i > 0) {
             alignedSeq1.append(seq1.charAt(i - 1));
             alignedSeq2.append('-');
