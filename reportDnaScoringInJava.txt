@@ -1,0 +1,16 @@
+This java code is designed to perform DNA sequence alignment using Global Alignment (Needleman-Wunsch algorithm) and 
+Local Alignment (Smith-Waterman algorithm). It determines which algorithm to use based on the lengths of the DNA 
+sequences and calculates the optimal alignment, alignment score, and visualises the score matrix, with an execution time measurement.
+
+Scoring system:
+MATCH: +1 (reward for matching nucleotides)
+MISMATCH: -1 (penalty for differing nucleotides)
+GAP: -2 (penalty for introducing gaps in alignment)
+
+The algorithm choice is made on the basis of difference in length of both the sequences. If the difference is greater than 10 local alignemnt is used else global alignment is used
+
+Execution Time:
+The execution time is measured using the System.nanoTime() method, which captures the time before and after the alignment 
+computation. The difference between the two timestamps gives the execution time in nanoseconds, which is then converted to 
+milliseconds. 
+
