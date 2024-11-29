@@ -19,3 +19,10 @@ Since the DNA sequence only consists of alphabets G,C,T,A, hence a data validati
 
 Output:
 Displays alignment scores, aligned sequences, score matrix, and alignment visualization.
+
+
+Significance of DNA Alignment:
+Identifies similarities and differences between organisms.
+Finds variations that may indicate genetic diseases, evolution or adaptations.
+Aligning viral strains (e.g., COVID-19) helps track mutations and design effective treatments, this is used for drug development.
+
