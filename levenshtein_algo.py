@@ -19,9 +19,9 @@ def levenshtein_algorithm(string1, string2):
                 d[i][j] = d[i - 1][j - 1]
             # minimum cost    
             else:   
-                d[i][j] = min(d[i][j - 1] + 1, #insertion
-                              d[i - 1][j] + 1, #deletion
-                              d[i - 1][j - 1] + 1) #replace
+                d[i][j] = min(d[i][j - 1] + 1,      #insertion
+                              d[i - 1][j] + 1,      #deletion
+                              d[i - 1][j - 1] + 1)  #replace
 
     edit_distance = d[m][n]
      # Return the edit distance and obtained matrix
