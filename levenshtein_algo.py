@@ -26,3 +26,23 @@ def levenshtein_algorithm(string1, string2):
     edit_distance = d[m][n]
      # Return the edit distance and obtained matrix
     return edit_distance, d
+
+# main
+if __name__ == "__main__":
+
+    # User input
+    word1 = str.lower(input("Enter the First String: "))
+    word2 = str.lower(input("Enter the Second String: "))
+
+    distance, matrix = levenshtein_algorithm(word1, word2)
+
+    print(f"""From {word1} to {word2}
+    \nMatrix Generated""")
+
+    # printing matrix
+    for i in matrix:
+        for j in range(len(matrix)):
+            print(i[j], end="  ")
+        print()
+
+    print("\nLevenshtein Distance:", distance)
