@@ -14,3 +14,8 @@ The execution time is measured using the System.nanoTime() method, which capture
 computation. The difference between the two timestamps gives the execution time in nanoseconds, which is then converted to 
 milliseconds. 
 
+Data Validation:
+Since the DNA sequence only consists of alphabets G,C,T,A, hence a data validation is added such that the user is only able to input correct data.
+
+Output:
+Displays alignment scores, aligned sequences, score matrix, and alignment visualization.
