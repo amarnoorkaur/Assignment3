@@ -21,4 +21,9 @@ local match: is used to find the area of the most similar region in two larger s
 example: S1: GGAGCTGACCC; S2:AGCTG
 
 
+Practical usage:
+
+DNA alignment code represents a simplified version of the tools which are used in bioinformatics. By aligning and scoring sequences, the same principles apply to analyzing genetic data from viruses like SARS-CoV-2. 
+
+
 
