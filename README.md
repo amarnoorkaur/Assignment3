@@ -24,3 +24,17 @@ Edit Distance Between 2 Strings - The Levenshtein Distance (“Edit Distance” 
 Edit Distance | DP-5. (2011, July 6). GeeksforGeeks. https://www.geeksforgeeks.org/edit-distance-dp-5/
 
 Jurafsky, D., & Martin, J. (2020). Speech and Language Processing An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition Third Edition draft. https://web.stanford.edu/~jurafsky/slp3/ed3book.pdf
+
+
+
+Amarnoor's work:
+Amarnoor worked on:
+DNA scoring and alignment in Java language -->
+Global and Local alignment algorithms
+Dynamic scoring
+Decision making mechanism to choose which algorithm to use based on the difference in length. 
+Traceback algorithm that extracts the optimal alignment
+Visualization to depict the alignment
+Execution time to measure the performance of algorithm
+
+References:
