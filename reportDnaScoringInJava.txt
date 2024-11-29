@@ -44,3 +44,4 @@ Testing:
 JUnit for unit testing Java methods.
 Manual verification of smaller sequences for correctness (final testing for the website, but this works only for global alignment https://bioboot.github.io/bimm143_W20/class-material/nw/ )
 Tested with sample sequences of varying similarity and length for both sequences which have difference > 10 and less than 10. Also tested for sequences which have invalid alphabets except G,C,A,T
+Also by inputting the alphabets in upper and lower case
