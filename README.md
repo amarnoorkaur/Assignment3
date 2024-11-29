@@ -30,7 +30,7 @@ Jurafsky, D., & Martin, J. (2020). Speech and Language Processing An Introductio
 Amarnoor's work:
 Amarnoor worked on:
 DNA scoring and alignment in Java language -->
-Global and Local alignment algorithms
+Global and Local alignment algorithms<br>
 Dynamic scoring
 Decision making mechanism to choose which algorithm to use based on the difference in length. 
 Traceback algorithm that extracts the optimal alignment
