@@ -38,3 +38,7 @@ Visualization to depict the alignment
 Execution time to measure the performance of algorithm
 
 References:
+https://theautomatic.net/2018/11/28/how-to-measure-dna-similarity-with-python-and-dynamic-programming/ 
+https://www.youtube.com/watch?v=ipp-pNRIp4g&pp=ygUaTmVlZGxlbWFuLVd1bnNjaCBhbGdvcml0aG0%3D 
+https://youtu.be/WRKQGwh_Mw0
+
