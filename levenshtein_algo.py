@@ -1,3 +1,5 @@
+import time
+
 def levenshtein_algorithm(string1, string2):
     # String length
     m = len(string1)
@@ -24,6 +26,7 @@ def levenshtein_algorithm(string1, string2):
                               d[i - 1][j - 1] + 1)  #replace
 
     edit_distance = d[m][n]
+
      # Return the edit distance and obtained matrix
     return edit_distance, d
 
@@ -34,6 +37,8 @@ if __name__ == "__main__":
     word1 = str.lower(input("Enter the First String: "))
     word2 = str.lower(input("Enter the Second String: "))
 
+    # System time performance counter - start
+    start_time = time.perf_counter()
     distance, matrix = levenshtein_algorithm(word1, word2)
 
     print(f"""From {word1} to {word2}
@@ -46,3 +51,12 @@ if __name__ == "__main__":
         print()
 
     print("\nLevenshtein Distance:", distance)
+
+    # System time performance counter - end
+    end_time = time.perf_counter() 
+    execution_time = end_time - start_time
+    print(f"\nExecution time: {execution_time:8f} seconds ")
+
+# Reference
+# Levenshtein Algorithm
+# https://medium.com/@tejaswiyadav221/the-levenshtein-distance-algorithm-a-string-metric-for-measuring-the-difference-between-two-269afbbddd34
