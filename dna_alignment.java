@@ -202,21 +202,43 @@ public class DNAAlignment {
 
     private static String visualizeAlignment(String alignedSeq1, String alignedSeq2) {
         StringBuilder visualization = new StringBuilder();
+        StringBuilder middleRow = new StringBuilder();
 
+        // Construct the middle row with match indicators
         for (int i = 0; i < alignedSeq1.length(); i++) {
-            if (alignedSeq1.charAt(i) == alignedSeq2.charAt(i)) {
-                visualization.append('|');
+            if (alignedSeq1.charAt(i) == alignedSeq2.charAt(i) && alignedSeq1.charAt(i) != '-') {
+                middleRow.append('|');  // Match indicator
             } else {
-                visualization.append(' ');
+                middleRow.append(' ');  // Mismatch or gap
             }
         }
+
+        // Build the visualization format
+        visualization.append("Alignment Visualization:\n");
+        for (int i = 0; i < alignedSeq1.length(); i++) {
+            visualization.append(alignedSeq1.charAt(i)).append(" ");
+        }
+        visualization.append("\n");
+
+        for (int i = 0; i < middleRow.length(); i++) {
+            visualization.append(middleRow.charAt(i)).append(" ");
+        }
+        visualization.append("\n");
+
+        for (int i = 0; i < alignedSeq2.length(); i++) {
+            visualization.append(alignedSeq2.charAt(i)).append(" ");
+        }
+        visualization.append("\n");
 
         return visualization.toString();
     }
 
+
+
+
     private static void printScoreMatrix(int[][] scores) {
         for (int i = 0; i < scores.length; i++) {
-            for (int j = 0; j < scores[i].length; j++) {
+            for (int j = 0; j < scores[i].length; j++) {git 
                 System.out.print(scores[i][j] + "\t");
             }
             System.out.println();
