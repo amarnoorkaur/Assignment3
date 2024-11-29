@@ -33,15 +33,15 @@ DNA scoring and alignment in Java language:
 
 Global and Local alignment algorithms
 
-Dynamic scoring
+1) Dynamic scoring
 
-Decision making mechanism to choose which algorithm to use based on the difference in length. 
+2) Decision making mechanism to choose which algorithm to use based on the difference in length. 
 
-Traceback algorithm that extracts the optimal alignment
+3) Traceback algorithm that extracts the optimal alignment
 
-Visualization to depict the alignment
+4) Visualization to depict the alignment
 
-Execution time to measure the performance of algorithm
+5) Execution time to measure the performance of algorithm
 
 References:
 https://theautomatic.net/2018/11/28/how-to-measure-dna-similarity-with-python-and-dynamic-programming/ 
