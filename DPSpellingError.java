@@ -1,5 +1,3 @@
-package assignent;
-
 import java.util.Scanner;
 
 public class DPSpellingError {
