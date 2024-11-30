@@ -84,7 +84,7 @@ Topic - Dynamic Programming for scoring spelling errors (or DNA alignment scores
                - Writing on Final Report
 - Nov 29, 2024 - Finalizing Everything for submission
 
-## Reference - (Research - Code - Final Reprot)
+## Reference - (Research - Code - Final Report)
 The complete beginners guide to dynamic programming -  https://stackoverflow.blog/2022/01/31/the-complete-beginners-guide-to-dynamic-programming/
 
 The Levenshtein Distance Algorithm - https://medium.com/@tejaswiyadav221/the-levenshtein-distance-algorithm-a-string-metric-for-measuring-the-difference-between-two-269afbbddd34
